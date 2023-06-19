@@ -1,0 +1,629 @@
+#operativesGrid {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: grid;
+    height: calc(95vh);
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.operativeCard {
+    min-width: 18vw;
+    position: relative;
+    background-color: black;
+    border: solid .2vw var(--myOrange);
+    transition: opacity 0.125s;
+}
+
+.nameNwounds {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5.5vw;
+}
+
+h1 {
+    position: relative;
+    left: -0.6vw;
+    padding-top: 3.1vw;
+    font-size: 2.6vw;
+    line-height: 1.35vw;
+    height: .5vw;
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+    padding-right: 2vw;
+    font-size: 5vw;
+    line-height: 7.7vw;
+    color: white;
+}
+
+.operativeImageHolder {
+    position: relative;
+    top: -0.5vw;
+    left: -0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12vw;
+    min-width: 12vw;
+    height: 10.5vw;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background-color: var(--myOrange);
+    border-top: solid .15vw var(--myOrange);
+}
+
+.imageName {
+    display: flex;
+    height: 5vw;
+}
+
+.operativeImage {
+    width: 11.5vw;
+    height: 10vw;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.woundsBar {
+    background-color: black;
+    width: 100%;
+    height: 2.75vw;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--myOrange);
+    width: 100%;
+    height: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: .15vw;
+}
+
+.statName {
+    width: 3vw;
+    color: black;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.statValues {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: .15vw;
+}
+
+.statValue {
+    width: 3vw;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.circle {
+    height: 1.6vw;
+    width: 1.6vw;
+    background: white;
+    border-radius: 50%;
+    margin-left: .3vw;
+    margin-bottom: .1vw;
+}
+
+.movement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weaponsList div:nth-child(odd) {
+    background-color: var(--myDarkGrey);
+}
+
+.weaponsList div:nth-child(even) {
+    background-color: var(--myDarkestGrey);
+}
+
+.weapons {
+    width: 100%;
+    height: 2vw;
+    padding-left: 0.5vw;
+    padding-right: 1vw;
+    padding-top: .15vw;
+}
+
+.weaponName {
+    background-color: rgb(0, 0, 0, 0) !important;
+    font-family: oswald;
+    color: black;
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+}
+
+.attackIcon {
+    position: relative;
+    top: 0.16vw;
+    height: 1.25vw;
+    margin-right: 0.2vw;
+    filter: brightness(0);
+}
+
+.notesArea {
+    padding-top: 0.3vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    height: 100%;
+}
+
+.notesArea p {
+    font-family: oswald;
+    font-weight: 200;
+    font-size: 1.1vw;
+    line-height: 1.1vw;
+}
+
+.notesArea p b {
+    font-family: oswald;
+    font-weight: 400;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.operativeCardLarge {
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    background-color: var(--myLightGrey);
+    width: 92vw;
+    height: 89vh;
+    margin-left: 1vw;
+    position: relative;
+    border: solid .3vw var(--myOrange);
+    transition: opacity 0.125s;
+    padding: 1vw;
+}
+
+.imageNameLarge {
+    display: flex;
+    height: 5vw;
+}
+
+.operativeImageLarge {
+    width: 17vw;
+    height: 14.9vw;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.largeCardSections {
+    display: flex;
+    height: 13vw;
+    width: 100%;
+    background-color: var(--myLightGrey);
+    border-bottom: solid .3vw var(--myOrange);
+}
+
+.nameSection {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(33, 33, 33);
+    padding-left: 2vw;
+    padding-top: 1vw;
+    font-size: 4vw;
+}
+
+.imageSection {
+    position: absolute;
+    top: -1vw;
+    left: 46vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18vw;
+    min-width: 18vw;
+    height: 15.75vw;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background-color: var(--myOrange);
+    border-top: solid .3vw var(--myOrange);
+}
+
+.statsSection {
+    width: 40%;
+}
+
+.statsLarge {
+    padding-left: 7vw;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--myLightGrey);
+}
+
+.statNameLarge {
+    width: 3vw;
+    color: black;
+    font-size: 2.111vw;
+    text-align: center;
+}
+
+.orange {
+    background-color: var(--myOrange);
+}
+
+.headerBar {
+    display: flex;
+    width: 100%;
+    height: 3vw;
+    margin-top: 0.75vw;
+    background-color: var(--myTitleGrey);
+    font-size: 1.9vw;
+    padding-left: 1vw;
+}
+
+.headerWeapon {
+    width: 30%;
+    color: black;
+    ;
+}
+
+.headerSkill {
+    width: 10%;
+    color: black;
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.headerD {
+    width: 10%;
+    color: black;
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.headerSR {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    color: black;
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.headerCrit {
+    width: 10%;
+    color: black;
+    text-align: center;
+    background-color: transparent !important;
+}
+
+.weaponsLarge {
+    display: flex;
+    width: 100%;
+    height: 2.5vw;
+    padding-left: 1vw;
+    padding-top: .2vw;
+}
+
+.attackIconLarge {
+    position: relative;
+    top: 0.16vw;
+    height: 1.5vw;
+    margin-right: 0.2vw;
+    filter: brightness(0);
+}
+
+.weaponNameLarge {
+    background-color: rgb(0, 0, 0, 0) !important;
+    font-family: oswald;
+    color: black;
+    font-size: 1.4vw;
+    line-height: 2vw;
+}
+
+.oswald {
+    font-family: oswald;
+    font-weight: 400;
+    font-size: 1.25vw;
+}
+
+.abilitiesUniqueActions {
+    margin-top: 1vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1vw;
+    grid-row-gap: 0px;
+}
+
+.abilities {
+    width: 100%;
+}
+
+.AUTitle {
+    padding-left: 10px;
+    background-color: var(--myTitleGrey);
+    height: 3vw;
+    font-size: 1.9vw;
+    color: black;
+
+}
+
+.ability {
+    font-family: oswald;
+    color: black;
+    font-size: 1.25vw;
+    line-height: 1.5vw;
+    font-weight: 200;
+    margin-bottom: 1vw;
+    margin-top: 5px;
+}
+
+.abilitySmall {
+    font-family: oswald;
+    color: black;
+    font-size: 1vw;
+    line-height: 1.25vw;
+    font-weight: 200;
+}
+
+.ability b {
+    font-family: oswald;
+    color: black;
+    font-weight: 400;
+}
+
+.activated {
+    filter: brightness(0.3);
+}
+
+.activateButton {
+    background-color: var(--myOrange);
+    position: absolute;
+    bottom: 10px;
+    width: 89.5vw;
+    height: 5vw;
+    text-align: center;
+    font-size: 3vw;
+    line-height: 4.95VW;
+    cursor: pointer;
+}
+
+.activateButton:hover {
+    background-color: var(--myDarkestGrey);
+}
+
+.specialRule {
+    display: flex;
+    font-family: oswald;
+    justify-content: center;
+    color: black;
+    font-size: 1vw;
+    line-height: 2vw;
+}
+
+.circleLarge {
+    margin-top: .25vw;
+    height: 1.5vw;
+    width: 1.5vw;
+    background: white;
+    border-radius: 50%;
+    margin-left: .3vw;
+}
+
+.pentagon {
+    display: inline-block;
+    margin-top: .2vw;
+    position: relative;
+    height: 1vw;
+    width: 1vw;
+    margin-left: .3vw;
+    margin-right: .3vw;
+    background-color: rgb(243, 0, 53) !important;
+    clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
+
+.square {
+    display: inline-block;
+    margin-top: .32vw;
+    position: relative;
+    height: 1vw;
+    width: 1vw;
+    margin-left: .3vw;
+    margin-RIGHT: .3vw;
+    background-color: rgb(71, 57, 180) !important;
+}
+
+.abilityCircle {
+    display: inline-block;
+    position: relative;
+    height: 1vw;
+    width: 1vw;
+    margin-left: .3vw;
+    margin-right: .3vw;
+    border-radius: 50%;
+    background-color: white !important;
+}
+
+.smallAbilityCircle {
+    display: inline-block;
+    position: relative;
+    height: .9vw;
+    width: .9vw;
+    margin-left: .3vw;
+    margin-right: .3vw;
+    border-radius: 50%;
+    background-color: white !important;
+}
+
+.healthButton {
+    z-index: 10;
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    background-color: var(--myTitleGrey);
+    color: rgb(33, 33, 33);
+    line-height: 2.2vw;
+    text-align: center;
+    font-size: 8vw;
+    cursor: pointer;
+}
+
+.dead {
+    filter: brightness(0);
+}
+
+.slowed {
+    border: solid .2vw var(--myDarkestGrey);
+}
+
+.grayscale {
+    background-color: var(--myDarkestGrey) !important;
+}
+
+.grayborder {
+    border-top: solid .15vw var(--myDarkestGrey);
+}
+
+.SRpentagon {
+    display: inline-block;
+    margin-top: .2vw;
+    position: relative;
+    height: 1.5vw;
+    width: 1.5vw;
+    margin-left: .3vw;
+    background-color: rgb(243, 0, 53) !important;
+    clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
+
+.SRsquare {
+    display: inline-block;
+    margin-top: .32vw;
+    position: relative;
+    height: 1.5vw;
+    width: 1.5vw;
+    margin-RIGHT: .3vw;
+    background-color: rgb(71, 57, 180) !important;
+}
+
+.SRCircle {
+    display: inline-block;
+    margin-top: .2vw;
+    position: relative;
+    height: 1.5vw;
+    width: 1.5vw;
+    margin-left: .3vw;
+    border-radius: 50%;
+    background-color: white !important;
+}
+
+.equipmentLine {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    height: 1.5vw;
+    width: 100%;
+    background-color: var(--myOrange);
+}
+
+.dropdown-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0.4vw;
+    font-family: oswald;
+    font-size: 0.9vw;
+    line-height: 1.6vw;
+}
+
+.dropdown-content {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    left: 0vw;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--myOrange);
+    z-index: 1;
+    top: -17.8vW;
+}
+
+.dropdownOption {
+    padding-left: 0.4vw;
+    font-family: oswald;
+    font-size: 01vw;
+    line-height: 2vw;
+    text-decoration: none;
+}
+
+.equipmentTriangle {
+    margin-top: 0.4vw;
+    width: 1.5vw;
+    height: 0.8vw;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: black;
+    opacity: 0.2;
+}
+
+.equipmentTriangleDown {
+    margin-top: 0.4vw;
+    width: 1.5vw;
+    height: 0.8vw;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    background-color: black;
+    opacity: 0.2;
+}
+
+.pentagonPloy {
+    display: inline-block;
+    margin-top: .2vw;
+    position: relative;
+    height: 1.3vw;
+    width: 1.3vw;
+    margin-left: .3vw;
+    margin-right: .3vw;
+    background-color: white !important;
+    clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
+
+.squarePloy {
+    display: inline-block;
+    margin-top: .32vw;
+    position: relative;
+    height: 1.2vw;
+    width: 1.2vw;
+    margin-left: .3vw;
+    margin-RIGHT: .3vw;
+    background-color: white !important;
+}
+
+.circlePloy {
+    display: inline-block;
+    height: 1.2vw;
+    width: 1.2vw;
+    background: white;
+    border-radius: 50%;
+    margin-left: .3vw;
+    margin-right: .2vw;
+    margin-bottom: .1vw;
+}

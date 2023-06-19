@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200;400&display=swap');
+
+:root {
+  --myOrange: rgb(233, 81, 8);
+  --myLightGrey: rgb(221, 225, 224);
+  --myDarkGrey: rgb(198, 198, 198);
+  --myDarkestGrey: rgb(170, 170, 170);
+  --myTitleGrey: rgb(139, 141, 140);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
+
+body {
+  background-color: black;
+  -webkit-font-smoothing: subpixel-antialiased;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.rotate {
+  height: 20vh;
+  margin-top: 35vh;
+  display: none;
+}
+
+.noMobile {
+  height: 60vh;
+  margin-top: 18vh;
+  display: none;
+}
+
+.windowWidth {
+  height: 20vh;
+  margin-top: 35vh;
+  display: none;
+}
+
+@media screen and (min-width: 901px) and (orientation:portrait) {
+  .mainContent {
+    display: none;
+  }
+
+  .rotate {
+    display: flex;
+  }
+}
