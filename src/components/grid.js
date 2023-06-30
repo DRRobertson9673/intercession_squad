@@ -14,7 +14,7 @@ const operativesArray = [
     {
         id: "operative1",
         image: SGT,
-        operativeName: "Ularik Skull Hunter",
+        operativeName: "Ulrik Skull Hunter",
         type: "Marksman, Scout",
         M: 3,
         APL: 3,
