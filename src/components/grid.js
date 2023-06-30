@@ -1,5 +1,6 @@
 import "../Style/grid.css"
-import AINTER from '../images/AINTER.jpg';
+import INTER1 from '../images/INTER1.jpg';
+import INTER2 from '../images/INTER2.jpg';
 import GREN from '../images/GREN.jpg';
 import GUNNER from '../images/GUNNER.jpg';
 import SGT from '../images/SGT.jpg';
@@ -13,7 +14,7 @@ const operativesArray = [
     {
         id: "operative1",
         image: SGT,
-        operativeName: "SERGEANT",
+        operativeName: "Ogvald the Punisher",
         type: "Marksman, Scout",
         M: 3,
         APL: 3,
@@ -55,7 +56,7 @@ const operativesArray = [
     {
         id: "operative2",
         image: GUNNER,
-        operativeName: "GUNNER",
+        operativeName: "Krugyll Fireseeker",
         type: "Staunch, Scout",
         M: 3,
         APL: 3,
@@ -126,7 +127,7 @@ const operativesArray = [
     {
         id: "operative3",
         image: SCOPE,
-        operativeName: "INTERCESSOR",
+        operativeName: "Vorja Tordenvrak",
         type: "Type 1",
         M: 3,
         APL: 3,
@@ -168,7 +169,7 @@ const operativesArray = [
     {
         id: "operative4",
         image: GREN,
-        operativeName: "GRENADIER",
+        operativeName: "Gunlaugur the Feaster",
         type: "Type 1",
         M: 3,
         APL: 3,
@@ -235,8 +236,8 @@ const operativesArray = [
     },
     {
         id: "operative5",
-        image: AINTER,
-        operativeName: "ASSAULT A",
+        image: INTER1,
+        operativeName: "Halrim Svelhjalm",
         type: "Type 1",
         M: 3,
         APL: 3,
@@ -246,29 +247,29 @@ const operativesArray = [
         W: 14,
         Weapons: [
             {
-                weaponName: "Heavy Bolt Pistol",
+                weaponName: "Auto Bolt Rifle",
                 weaponIcon: rangedIcon,
                 A: 4,
                 BS: "3+",
                 D: "3/4",
-                SR: <div className="headerSR oswald">RNG<div className="SRpentagon"></div></div>,
-                Crit: "P1"
+                SR: "Ceaseless",
+                Crit: "-"
             },
             {
-                weaponName: "Chainsword",
+                weaponName: "Fists",
                 weaponIcon: meleeIcon,
-                A: 5,
+                A: 4,
                 BS: "3+",
-                D: "4/5",
+                D: "3/4",
                 SR: "-",
                 Crit: "-"
             },
         ],
         Abilities: [
             {
-                name: "Shock Assault ",
-                detail: "This operative can perform two Fight actions during its activation."
-            },
+                name: "Bolter Discipline ",
+                detail: "This operative can perform two Shoot actions during its activation if a bolt weapon is selected for at least one of those shooting attacks."
+            }
         ],
         UniqueActions: [
 
@@ -279,8 +280,8 @@ const operativesArray = [
 
     {
         id: "operative6",
-        image: AINTER,
-        operativeName: "ASSAULT B",
+        image: INTER2,
+        operativeName: "Valtur Wintertooth",
         type: "Type 1",
         M: 3,
         APL: 3,
@@ -290,29 +291,29 @@ const operativesArray = [
         W: 14,
         Weapons: [
             {
-                weaponName: "Heavy Bolt Pistol",
+                weaponName: "Auto Bolt Rifle",
                 weaponIcon: rangedIcon,
                 A: 4,
                 BS: "3+",
                 D: "3/4",
-                SR: <div className="headerSR oswald">RNG<div className="SRpentagon"></div></div>,
-                Crit: "P1"
+                SR: "Ceaseless",
+                Crit: "-"
             },
             {
-                weaponName: "Chainsword",
+                weaponName: "Fists",
                 weaponIcon: meleeIcon,
-                A: 5,
+                A: 4,
                 BS: "3+",
-                D: "4/5",
+                D: "3/4",
                 SR: "-",
                 Crit: "-"
             },
         ],
         Abilities: [
             {
-                name: "Shock Assault ",
-                detail: "This operative can perform two Fight actions during its activation."
-            },
+                name: "Bolter Discipline ",
+                detail: "This operative can perform two Shoot actions during its activation if a bolt weapon is selected for at least one of those shooting attacks."
+            }
         ],
         UniqueActions: [
 

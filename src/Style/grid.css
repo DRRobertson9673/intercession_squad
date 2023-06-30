@@ -32,10 +32,11 @@
 
 h1 {
     position: relative;
+    top: -1.7vw;
     left: -0.6vw;
     padding-top: 3.1vw;
-    font-size: 2.6vw;
-    line-height: 1.35vw;
+    font-size: 2.3vw;
+    line-height: 2.35vw;
     height: .5vw;
 }
 
