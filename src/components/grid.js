@@ -14,7 +14,7 @@ const operativesArray = [
     {
         id: "operative1",
         image: SGT,
-        operativeName: "Ogvald the Punisher",
+        operativeName: "Ularik The Skull Hunter",
         type: "Marksman, Scout",
         M: 3,
         APL: 3,
@@ -56,7 +56,7 @@ const operativesArray = [
     {
         id: "operative2",
         image: GUNNER,
-        operativeName: "Krugyll Fireseeker",
+        operativeName: "Solvar Firestriker",
         type: "Staunch, Scout",
         M: 3,
         APL: 3,
@@ -127,7 +127,7 @@ const operativesArray = [
     {
         id: "operative3",
         image: SCOPE,
-        operativeName: "Vorja Tordenvrak",
+        operativeName: "Gaudvin Blackborn",
         type: "Type 1",
         M: 3,
         APL: 3,
@@ -169,7 +169,7 @@ const operativesArray = [
     {
         id: "operative4",
         image: GREN,
-        operativeName: "Gunlaugur the Feaster",
+        operativeName: "Haakian Wintertooth",
         type: "Type 1",
         M: 3,
         APL: 3,
@@ -237,7 +237,7 @@ const operativesArray = [
     {
         id: "operative5",
         image: INTER1,
-        operativeName: "Halrim Svelhjalm",
+        operativeName: "Holmja Fellseeker",
         type: "Type 1",
         M: 3,
         APL: 3,
@@ -281,7 +281,7 @@ const operativesArray = [
     {
         id: "operative6",
         image: INTER2,
-        operativeName: "Valtur Wintertooth",
+        operativeName: "Krugan Sagastone",
         type: "Type 1",
         M: 3,
         APL: 3,
