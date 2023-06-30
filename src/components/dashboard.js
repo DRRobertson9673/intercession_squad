@@ -144,7 +144,7 @@ function Dashboard() {
                             <div className="stratHeader">
                                 <div className="stratName">TACTICAL DOCTRINE <small>(STRAT PLOY)</small></div><div className="stratCost">1CP</div>
                             </div>
-                            <div className="stratContent">Until the end of the Turning Point, each time a friendly INTERCESSION SQUAD operative makes a shooting attack against an enemy operative within pentagon of it, in the Roll Attack Dice step of that shooting attack, you can re-roll one of your attack dice. You cannot use another "Doctrine" Strategic Ploy in this Turning Point.</div>
+                            <div className="stratContent">Until the end of the Turning Point, each time a friendly INTERCESSION SQUAD operative makes a shooting attack against an enemy operative within <div className="pentagonPloy"></div> of it, in the Roll Attack Dice step of that shooting attack, you can re-roll one of your attack dice. You cannot use another "Doctrine" Strategic Ploy in this Turning Point.</div>
 
                             <div className="stratHeader">
                                 <div className="stratName">ANGEL OF DEATH <small>(TAC PLOY)</small></div><div className="stratCost">1CP</div>
