@@ -103,7 +103,6 @@
 
 .turningPointTitle {
     margin-top: 13vh;
-    ;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -212,3 +211,54 @@
 .orangeText {
     color: var(--myOrange);
 }
+
+.reset {
+    width: 60vw;
+    text-align: center;
+    position: absolute;
+    bottom: 1vw;
+    color: rgb(107, 107, 107);
+    letter-spacing: 0.15vh;
+}
+
+.Modal {
+    background-color: var(--myOrange);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    border: none !important;
+  }
+
+  .modal-portal {
+    z-index: 40;
+    border: none !important;
+  }
+  
+  .ReactModal__Content {
+    border: none !important;
+    outline: none !important;
+    text-align: center;
+    padding: 4vw;
+    box-shadow: 0 0 5vw rgba(0, 0, 0, 1);
+  }
+  
+  .modalClick {
+    width: 7vw;
+    border: none !important;
+    outline: none !important;
+    background-color: var(--myOrange);
+    font-size: 3vw;
+    margin-top: 1vw;
+    cursor: pointer;
+  }
+
+  .modalClick:hover {
+    color: black;
+  }  
+
+  .modalText {
+    font-family: oswald;
+    font-weight: 100;
+  }

@@ -1,6 +1,7 @@
 import "../Style/dashboard.css"
 import $ from 'jquery';
 import { useState } from 'react';
+import Modal from 'react-modal';
 
 
 const dashOpen = () => {
@@ -60,7 +61,6 @@ function Dashboard() {
     const handleIncreaseTP = () => {
         setTP((prevTP) => prevTP + 1);
         $('.operativeCard').removeClass("activated");
-
         $('.strat1').removeClass('orangeText');
         $('.strat2').removeClass('orangeText');
         $('.strat3').removeClass('orangeText');
@@ -72,8 +72,6 @@ function Dashboard() {
         setMyCP((prevMyCP) => prevMyCP + 1);
     }
 
-
-
     const stratPloysClick = () => {
         $('.tacPloysArea').addClass('hidden');
         $('.stratPloysArea').removeClass('hidden');
@@ -81,6 +79,8 @@ function Dashboard() {
         $('.turningPointHeader').removeClass('headerSelected');
         $('.tacPloys').removeClass('headerSelected');
         $('.stratPloys').addClass('headerSelected');
+        $('.reset').addClass('hidden');
+        console.log("clicked");
     }
 
     const tacPloysClick = () => {
@@ -90,6 +90,7 @@ function Dashboard() {
         $('.stratPloys').removeClass('headerSelected');
         $('.turningPointHeader').removeClass('headerSelected');
         $('.tacPloys').addClass('headerSelected');
+        $('.reset').addClass('hidden');
     }
 
     const turningPointHeaderClick = () => {
@@ -99,47 +100,79 @@ function Dashboard() {
         $('.stratPloys').removeClass('headerSelected');
         $('.tacPloys').removeClass('headerSelected');
         $('.turningPointHeader').addClass('headerSelected');
+        $('.reset').removeClass('hidden');
     }
 
     const turn1Orange = () => {
-        $('.strat1').addClass('orangeText');
-        setMyCP((prevMyCP) => prevMyCP - 1);
+        if (currentMyCP > 0) {
+            $('.strat1').addClass('orangeText');
+            setMyCP((prevMyCP) => prevMyCP - 1);
+        }
     }
 
     const turn2Orange = () => {
-        $('.strat2').addClass('orangeText');
-        setMyCP((prevMyCP) => prevMyCP - 1);
+        if (currentMyCP > 0) {
+            $('.strat2').addClass('orangeText');
+            setMyCP((prevMyCP) => prevMyCP - 1);
+        }
     }
 
     const turn3Orange = () => {
-        $('.strat3').addClass('orangeText');
-        setMyCP((prevMyCP) => prevMyCP - 1);
+        if (currentMyCP > 0) {
+            $('.strat3').addClass('orangeText');
+            setMyCP((prevMyCP) => prevMyCP - 1);
+        }
     }
 
     const turn4Orange = () => {
-        $('.strat4').addClass('orangeText');
-        setMyCP((prevMyCP) => prevMyCP - 1);
+        if (currentMyCP > 0) {
+            $('.strat4').addClass('orangeText');
+            setMyCP((prevMyCP) => prevMyCP - 1);
+        }
     }
 
     const turn5Orange = () => {
-        $('.strat5').addClass('orangeText');
-        setMyCP((prevMyCP) => prevMyCP - 1);
+        if (currentMyCP > 0) {
+            $('.strat5').addClass('orangeText');
+            setMyCP((prevMyCP) => prevMyCP - 1);
+        }
     }
 
     const turn6Orange = () => {
-        $('.strat6').addClass('orangeText');
-        setMyCP((prevMyCP) => prevMyCP - 1);
+        if (currentMyCP > 0) {
+            $('.strat6').addClass('orangeText');
+            setMyCP((prevMyCP) => prevMyCP - 1);
+        }
     }
 
     const turn7Orange = () => {
-        $('.strat7').addClass('orangeText');
-        setMyCP((prevMyCP) => prevMyCP - 1);
+        if (currentMyCP > 0) {
+            $('.strat7').addClass('orangeText');
+            setMyCP((prevMyCP) => prevMyCP - 1);
+        }
     }
 
     const turn8Orange = () => {
-        $('.strat8').addClass('orangeText');
-        setMyCP((prevMyCP) => prevMyCP - 1);
+        if (currentMyCP > 0) {
+            $('.strat8').addClass('orangeText');
+            setMyCP((prevMyCP) => prevMyCP - 1);
+        }
     }
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const refreshPage = () => {
+        closeModal();
+        window.location.reload();
+    };
 
     return (
         <div className="dashboard">
@@ -167,52 +200,63 @@ function Dashboard() {
                             <div className="increaseTurningPoint" onClick={handleIncreaseTP}>NEXT TURNING POINT</div>
                         </div>
                     </div>
+                    <div className="reset" onClick={openModal}>RESET</div>
+                    <Modal isOpen={isModalOpen}
+                        onRequestClose={closeModal}
+                        className="Modal"
+                        overlayClassName="custom-modal-overlay"
+                        portalClassName="modal-portal" // Add a portal class name
+                        contentLabel="Confirmation">
+                        <p className="modalText">Are you sure you want to reset?</p>
+                        <button className="modalClick" onClick={refreshPage}>YES</button>
+                        <button className="modalClick" onClick={closeModal}>NO</button>
+                    </Modal>
 
                     <div className="scrollable">
                         <div className="stratPloysArea hidden">
 
                             <div className="stratHeader" onClick={turn1Orange}>
-                                <div className="strat1 stratName">ASSAULT DOCTRINE <small className="strat1">(STRAT PLOY)</small></div><div className="stratCost">1CP</div>
+                                <div className="strat1 stratName">ASSAULT DOCTRINE <small className="strat1">(STRAT PLOY)</small></div><div className="strat1 stratCost">1CP</div>
                             </div>
                             <div className="strat1 stratContent">Until the end of the Turning Point, each time a friendly INTERCESSION SQUAD operative fights in combat in an activation in which it performed a Charge action, in the Roll Attack Dice step of that combat, you can re-roll one of your attack dice. You cannot use another "Doctrine" Strategic Ploy in this Turning Point.</div>
 
                             <div className="stratHeader" onClick={turn2Orange}>
-                                <div className="strat2 stratName">AND THEY SHALL KNOW NO FEAR <small className="strat2">(STRAT PLOY)</small></div><div className="stratCost">1CP</div>
+                                <div className="strat2 stratName">AND THEY SHALL KNOW NO FEAR <small className="strat2">(STRAT PLOY)</small></div><div className="strat2 stratCost">1CP</div>
                             </div>
-                            <div className="stratContent">Until the end of the Turning Point:
+                            <div className="strat2 stratContent">Until the end of the Turning Point:
                                 <ul>
-                                    <li>You can ignore any or all modifiers to the APL of friendly INTERCESSION SQUAD operatives.</li>
-                                    <li>Friendly INTERCESSION SQUAD operatives are not injured.</li>
+                                    <li className="strat2">You can ignore any or all modifiers to the APL of friendly INTERCESSION SQUAD operatives.</li>
+                                    <li className="strat2">Friendly INTERCESSION SQUAD operatives are not injured.</li>
                                 </ul>
                             </div>
 
                             <div className="stratHeader" onClick={turn3Orange}>
-                                <div className="strat3 stratName">DEVASTATOR DOCTRINE <small className="strat3">(STRAT PLOY)</small></div><div className="stratCost">1CP</div>
+                                <div className="strat3 stratName">DEVASTATOR DOCTRINE <small className="strat3">(STRAT PLOY)</small></div><div className="strat3 stratCost">1CP</div>
                             </div>
                             <div className="strat3 stratContent">Until the end of the Turning Point, each time a friendly INTERCESSION SQUAD operative makes a shooting attack against an enemy operative more than <div className="pentagonPloy"></div> from it, in the Roll Attack Dice step of that shooting attack, you can re-roll one of your attack dice. You cannot use another "Doctrine" Strategic Ploy in this Turning Point.</div>
 
                             <div className="stratHeader" onClick={turn4Orange}>
-                                <div className="strat4 stratName">TACTICAL DOCTRINE <small className="strat4">(STRAT PLOY)</small></div><div className="stratCost">1CP</div>
+                                <div className="strat4 stratName">TACTICAL DOCTRINE <small className="strat4">(STRAT PLOY)</small></div><div className="strat4 stratCost">1CP</div>
                             </div>
                             <div className="strat4 stratContent">Until the end of the Turning Point, each time a friendly INTERCESSION SQUAD operative makes a shooting attack against an enemy operative within <div className="pentagonPloy"></div> of it, in the Roll Attack Dice step of that shooting attack, you can re-roll one of your attack dice. You cannot use another "Doctrine" Strategic Ploy in this Turning Point.</div>
 
                             <div className="stratHeader" onClick={turn5Orange}>
-                                <div className="strat5 stratName">ANGEL OF DEATH <small className="strat5">(TAC PLOY)</small></div><div className="stratCost">1CP</div>
+                                <div className="strat5 stratName">ANGEL OF DEATH <small className="strat5">(TAC PLOY)</small></div><div className="strat5 stratCost">1CP</div>
                             </div>
                             <div className="strat5 stratContent">Use this Tactical Ploy at the end of the Firefight phase. Select one friendly INTERCESSION SQUAD operative to perform a free Fight action.</div>
 
                             <div className="stratHeader" onClick={turn6Orange}>
-                                <div className="strat6 stratName">ADAPTIVE TACTICS <small className="strat6">(TAC PLOY)</small></div><div className="stratCost">1CP</div>
+                                <div className="strat6 stratName">ADAPTIVE TACTICS <small className="strat6">(TAC PLOY)</small></div><div className="strat6 stratCost">1CP</div>
                             </div>
                             <div className="strat6 stratContent">Use this Tactical Ploy in the Select a Kill Team step, when selecting your kill team. Change one of your Chapter Tactics abilities (pg 3) for the battle to another from the same category. You can only use this Tactical Ploy once per battle.</div>
 
                             <div className="stratHeader" onClick={turn7Orange}>
-                                <div className="strat7 stratName">TRANSHUMAN PHYSIOLOGY <small className="strat7">(TAC PLOY)</small></div><div className="stratCost">1CP</div>
+                                <div className="strat7 stratName">TRANSHUMAN PHYSIOLOGY <small className="strat7">(TAC PLOY)</small></div><div className="strat7 stratCost">1CP</div>
                             </div>
                             <div className="strat7 stratContent">Use this Tactical Ploy in the Roll Defence Dice step of a shooting attack, after rolling defence dice for a friendly INTERCESSION SQUAD operative. You can retain one of your successful normal saves as a critical save instead.</div>
 
                             <div className="stratHeader" onClick={turn8Orange}>
-                                <div className="strat8 stratName">WRATH OF VENGEANCE <small className="strat8">(TAC PLOY)</small></div><div className="stratCost">1CP</div>
+                                <div className="strat8 stratName">WRATH OF VENGEANCE <small className="strat8">(TAC PLOY)</small></div><div className="strat8 stratCost">1CP</div>
                             </div>
                             <div className="strat8 stratContent">Use this Tactical Ploy when a friendly INTERCESSION SQUAD operative is incapacitated. Before that operative is removed from the killzone, it can perform a free Shoot action. Unless otherwise specified, the operative would be injured for this.</div>
                         </div>

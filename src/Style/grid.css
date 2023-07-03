@@ -47,6 +47,7 @@ h2 {
     font-size: 5vw;
     line-height: 7.7vw;
     color: white;
+    cursor: pointer;
 }
 
 .operativeImageHolder {
