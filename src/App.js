@@ -9,7 +9,6 @@ import $ from 'jquery';
 import { useState } from 'react';
 
 function App() {
-  const [reloadCounter, setReloadCounter] = useState(0);
 
   const handleScreenClick = () => {
     $('.dashboard').removeClass("open");
