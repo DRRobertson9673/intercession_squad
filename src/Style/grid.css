@@ -45,10 +45,10 @@
 h1 {
     position: relative;
     top: -1.7vw;
-    left: -0.6vw;
+    left: -0.4vw;
     padding-top: 3.1vw;
     font-size: 2.3vw;
-    line-height: 2.35vw;
+    line-height: 5.45vw;
     height: .5vw;
 }
 
@@ -57,7 +57,7 @@ h2 {
     text-align: center;
     padding-right: 2vw;
     font-size: 5vw;
-    line-height: 7.7vw;
+    line-height: 8.2vw;
     color: white;
     cursor: pointer;
 }
@@ -504,10 +504,6 @@ h2 {
 
 .dead {
     filter: brightness(0);
-}
-
-.slowed {
-    border: solid .2vw var(--myDarkestGrey);
 }
 
 .grayscale {

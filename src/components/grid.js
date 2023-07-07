@@ -17,8 +17,6 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
     const handleDecreaseWound = () => {
         setWound((prevWound) => prevWound - 1);
         if (currentWound - 1 < (wounds / 2)) {
-            console.log('slowed');
-            $(`[name='${id}']`).addClass("slowed");
             setMove((prevmov) => 2);
             $(`[name='${id}']`).children().eq(2).addClass("grayscale");
             $(`[name='${id}']`).children().eq(0).children().eq(0).addClass("grayscale grayborder");
@@ -33,7 +31,6 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
     const handleIncreaseWound = () => {
         setWound((prevWound) => wounds);
         $(`[name='${id}']`).removeClass("dead");
-        $(`[name='${id}']`).removeClass("slowed");
         setMove((prevmov) => M);
         $(`[name='${id}']`).children().eq(2).removeClass("grayscale");
         $(`[name='${id}']`).children().eq(0).children().eq(0).removeClass("grayscale grayborder");
