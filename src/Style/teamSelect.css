@@ -1,0 +1,96 @@
+.TEAMgrid {
+    height: 100vh;
+    width: 100vw;
+    padding: 7vw;
+    padding-top: 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1vw;
+    justify-content: center;
+    align-content: center;
+}
+
+.TEAMrow {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0;
+}
+
+.TEAMchoice {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TEAMoperativeImageHolder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12vw;
+    min-width: 12vw;
+    height: 10.5vw;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background-color: var(--myOrange);
+    border-top: solid .15vw var(--myOrange);
+}
+
+.TEAMoperativeImage {
+    width: 11.5vw;
+    height: 10vw;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+H3 {
+    font-size: 1.75vw;
+    letter-spacing: 0.05vh;
+    line-height: 2.25vw;
+}
+
+.TEAMchoice p {
+    line-height: 1.2vw;
+    font-family: oswald;
+    font-weight: 100;
+    font-size: 1vw;
+    letter-spacing: 0.05vh;
+    color: var(--myOrange);
+}
+
+.TEAMchoice p b {
+    color: var(--myOrange);
+}
+
+div p:last-of-type {
+    padding-bottom: 1vw;
+}
+
+#createTeamButton {
+    height: 5vh;
+    width: 30vh;
+    background-color: var(--myOrange);
+    border-radius: 10px;
+    color: rgb(23, 23, 23);
+    text-align: center;
+    font-size: 3vh;
+    line-height: 5vh;
+    margin: auto;
+    margin-top: 8vh;
+}
+
+.operativeSelected {
+    opacity: 0.25;
+}
+
+.fullTeamModal {
+    padding: 2vw;
+    background-color: var(--myOrange);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    border: none !important;
+  }

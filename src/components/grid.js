@@ -8,7 +8,7 @@ import SCOPE from '../images/SCOPE.jpg';
 import meleeIcon from '../images/weptypeM.png';
 import rangedIcon from '../images/weptypeR.png';
 import $ from 'jquery';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const operativesArray = [
     {
@@ -397,7 +397,6 @@ const Card = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Notes, id }) =
             ))}
         </div>
         <div className="notesArea" onClick={handleClick}>
-            <p>{Notes[0]}<br /><br />{Notes[1]}</p>
         </div>
         
     </div>;
@@ -459,7 +458,7 @@ const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Abilities
                     <div className="headerSkill oswald">{weapon.A}</div>
                     <div className="headerSkill oswald">{weapon.BS}</div>
                     <div className="headerD oswald">{weapon.D}</div>
-                    <div className="headerSR oswald">{weapon.SR}</div>
+                    <div className="headerSR oswald" dangerouslySetInnerHTML={{ __html: weapon.SR }}></div>
                     <div className="headerCrit oswald">{weapon.Crit}</div>
                 </div>
             ))}
@@ -483,8 +482,18 @@ const CardLarge = ({ name, image, wounds, M, APL, GA, DF, SV, Weapons, Abilities
     </div>;
 };
 
-function Grid() {
 
+
+function Grid() {
+    const [operativesArray, setOperativesArray] = useState([]);
+  
+    useEffect(() => {
+      const storedOperativesArray = localStorage.getItem('operativesArray');
+      if (storedOperativesArray) {
+        setOperativesArray(JSON.parse(storedOperativesArray));
+      }
+    }, []);
+  
     return (
         <div>
             <div id="operativesGrid">
@@ -499,5 +508,7 @@ function Grid() {
         </div>
     );
 }
-
-export default Grid;
+  
+  export default Grid;
+  
+  

@@ -437,11 +437,6 @@ function Dashboard() {
                     </div>
                 </div>
 
-
-
-
-
-
                 <div className="dashRight dashOutside">
                     <div className="cpTitle scoreTitle">CP</div>
                     <div className="cpContent scoreContent"><div className="addMinus" onClick={handleDecreaseOPCP}>-</div>{currentOPCP}<div className="addMinus" onClick={handleIncreaseOPCP}>+</div></div>
