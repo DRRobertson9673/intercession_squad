@@ -70,6 +70,7 @@ function Dashboard() {
         $('.strat7').removeClass('orangeText');
         $('.strat8').removeClass('orangeText');
         setMyCP((prevMyCP) => prevMyCP + 1);
+        setMyCP((prevOPCP) => prevOPCP + 1);
     }
 
     const stratPloysClick = () => {
