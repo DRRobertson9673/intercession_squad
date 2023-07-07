@@ -439,7 +439,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative7",
             image: INTER1,
-            operativeName: "Krugan Sagastone",
+            operativeName: "Holmja Fellseeker",
             type: "Type 1",
             M: 3,
             APL: 3,
