@@ -173,6 +173,7 @@ function Dashboard() {
     const refreshPage = () => {
         closeModal();
         window.location.reload();
+        localStorage.setItem('operativesArray', JSON.stringify([]));
     };
 
     return (
