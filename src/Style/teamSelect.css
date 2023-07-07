@@ -1,8 +1,7 @@
 .TEAMgrid {
     height: 100vh;
     width: 100vw;
-    padding: 7vw;
-    padding-top: 10vw;
+
     padding-left: 10vw;
     padding-right: 10vw;
     display: grid;
