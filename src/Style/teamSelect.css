@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 
 .TEAMoperativeImageHolder {
@@ -39,15 +40,17 @@
 }
 
 .TEAMoperativeImage {
-    width: 11.5vw;
-    height: 10vw;
+    position: relative;
+    top: 0.07vw;
+    width: 11.25vw;
+    height: 9.75vw;
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
 H3 {
     font-size: 1.75vw;
     letter-spacing: 0.05vh;
-    line-height: 2.25vw;
+    line-height: 2.5vw;
 }
 
 .TEAMchoice p {
@@ -78,6 +81,7 @@ div p:last-of-type {
     line-height: 5vh;
     margin: auto;
     margin-top: 8vh;
+    cursor: pointer;
 }
 
 .operativeSelected {

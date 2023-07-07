@@ -70,7 +70,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative1",
             image: SGT,
-            operativeName: "Ulrik Skull Hunter",
+            operativeName: "Skulljaeger",
             type: "Marksman, Scout",
             M: 3,
             APL: 3,
@@ -124,7 +124,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative2",
             image: GUNNER,
-            operativeName: "Solvar Firestriker",
+            operativeName: "Firestriker",
             type: "Staunch, Scout",
             M: 3,
             APL: 3,
@@ -194,7 +194,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative3",
             image: SCOPE,
-            operativeName: "Gaudvin Blackborn",
+            operativeName: "Skygge",
             type: "Type 1",
             M: 3,
             APL: 3,
@@ -249,7 +249,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative4",
             image: GREN,
-            operativeName: "Haakian Wintertooth",
+            operativeName: "Thunderborn",
             type: "Type 1",
             M: 3,
             APL: 3,
@@ -327,7 +327,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative5",
             image: AINTER1,
-            operativeName: "Halrim Svelhjalm",
+            operativeName: "Skulder",
             type: "Type 1",
             M: 3,
             APL: 3,
@@ -383,7 +383,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative6",
             image: INTER2,
-            operativeName: "Krugan Sagastone",
+            operativeName: "Krugan",
             type: "Type 1",
             M: 3,
             APL: 3,
@@ -439,7 +439,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative7",
             image: INTER1,
-            operativeName: "Holmja Fellseeker",
+            operativeName: "Fellseeker",
             type: "Type 1",
             M: 3,
             APL: 3,
@@ -495,7 +495,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative8",
             image: INTER3,
-            operativeName: "Ymari Halfhammer",
+            operativeName: "Halfhammer",
             type: "Type 1",
             M: 3,
             APL: 3,
@@ -550,7 +550,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative9",
             image: AINTER2,
-            operativeName: "Vorja Tordenvrak",
+            operativeName: "Sikrend",
             type: "Type 1",
             M: 3,
             APL: 3,
@@ -606,7 +606,7 @@ function TeamSelect({ onClick }) {
         const newOperative = {
             id: "operative10",
             image: AINTER3,
-            operativeName: "Jorghulf Fyrcaller",
+            operativeName: "Boldtooth",
             type: "Type 1",
             M: 3,
             APL: 3,
@@ -670,7 +670,7 @@ function TeamSelect({ onClick }) {
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={SGT} alt="" />
                     </div>
-                    <h3>Ulrik Skull Hunter</h3>
+                    <h3>Skulljaeger</h3>
                     <p>RECLUSIAM-BLESSED BOLTS <b>(3EP)</b></p>
                 </div>
 
@@ -678,7 +678,7 @@ function TeamSelect({ onClick }) {
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={GUNNER} alt="" />
                     </div>
-                    <h3>Solvar Firestriker</h3>
+                    <h3>Firestriker</h3>
                     <p>AUSPEX <b>(2EP)</b></p>
                     <p>COMBAT BLADE <b>(1EP)</b></p>
                 </div>
@@ -687,7 +687,7 @@ function TeamSelect({ onClick }) {
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={SCOPE} alt="" />
                     </div>
-                    <h3>Gaudvin Blackborn</h3>
+                    <h3>Skygge</h3>
                     <p>VENGEANCE-CLASS SCOPE <b>(3EP)</b></p>
                     <p>COMBAT BLADE <b>(1EP)</b></p>
                 </div>
@@ -696,7 +696,7 @@ function TeamSelect({ onClick }) {
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={GREN} alt="" />
                     </div>
-                    <h3>Haakian Wintertooth</h3>
+                    <h3>Thunderborn</h3>
                     <p>FRAG/KRAK GRENADES <b>(FREE)</b></p>
                 </div>
 
@@ -704,7 +704,7 @@ function TeamSelect({ onClick }) {
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={AINTER1} alt="" />
                     </div>
-                    <h3>Halrim Svelhjalm</h3>
+                    <h3>Skulder</h3>
                     <p>TILTING SHIELD <b>(3EP)</b></p>
                 </div>
 
@@ -714,35 +714,35 @@ function TeamSelect({ onClick }) {
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={INTER2} alt="" />
                     </div>
-                    <h3>Krugan Sagastone</h3>
+                    <h3>Krugan</h3>
                 </div>
 
                 <div className="TEAMchoice operative7" onClick={operative7Click}>
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={INTER1} alt="" />
                     </div>
-                    <h3>Holmja Fellseeker</h3>
+                    <h3>Fellseeker</h3>
                 </div>
 
                 <div className="TEAMchoice operative8" onClick={operative8Click}>
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={INTER3} alt="" />
                     </div>
-                    <h3>Ymari Halfhammer</h3>
+                    <h3>Halfhammer</h3>
                 </div>
 
                 <div className="TEAMchoice operative9" onClick={operative9Click}>
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={AINTER2} alt="" />
                     </div>
-                    <h3>Vorja Tordenvrak</h3>
+                    <h3>Sikrend</h3>
                 </div>
 
                 <div className="TEAMchoice operative10" onClick={operative10Click}>
                     <div className="TEAMoperativeImageHolder">
                         <img className="TEAMoperativeImage" src={AINTER3} alt="" />
                     </div>
-                    <h3>Jorghulf Fyrcaller</h3>
+                    <h3>Boldtooth</h3>
                 </div>
 
             </div>
