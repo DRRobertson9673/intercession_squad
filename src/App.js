@@ -28,8 +28,6 @@ function App() {
     setSeed(Math.random());
   }
 
-
-
   return (
     <div>
       <TeamSelect onClick={reset}/>

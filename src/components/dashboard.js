@@ -321,7 +321,7 @@ function Dashboard() {
                             </div>
                             <div className="stratContent">You can reveal this Tac Op in the Target Reveal step of any Turning Point.
                                 <ul>
-                                    <li>If an enemy operative is incapacitated by a friendly operative, and that friendly operative is within pentagon of your opponent's drop zone when it does so, you score 1 VP.</li>
+                                    <li>If an enemy operative is incapacitated by a friendly operative, and that friendly operative is within <div className="pentagonPloy"></div> of your opponent's drop zone when it does so, you score 1 VP.</li>
                                     <li>If you achieve the first condition in any subsequent Turning Point, you score 1 VP.</li>
                                 </ul>
                             </div>

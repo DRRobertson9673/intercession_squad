@@ -94,3 +94,13 @@ div p:last-of-type {
     z-index: 50;
     border: none !important;
   }
+
+  @media screen and (orientation:portrait) {
+    .TEAMgrid {
+      display: none;
+    }
+  
+    .rotate {
+      display: flex;
+    }
+  }
