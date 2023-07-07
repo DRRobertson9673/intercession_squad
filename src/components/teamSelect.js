@@ -40,12 +40,7 @@ function TeamSelect({ onClick }) {
 
     const [operativesArray, setOperativesArray] = useState([]);
 
-    useEffect(() => {
-        const storedOperativesArray = localStorage.getItem('operativesArray');
-        if (storedOperativesArray) {
-            setOperativesArray(JSON.parse(storedOperativesArray));
-        }
-    }, []);
+
 
     useEffect(() => {
         localStorage.setItem('operativesArray', JSON.stringify(operativesArray));
