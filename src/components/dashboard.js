@@ -9,6 +9,7 @@ const dashOpen = () => {
     $('.dashOpen').addClass("hidden");
     $('.dashboard').addClass("shadow");
     $('.screen').removeClass("hidden");
+    $('.reset').removeClass('hidden');
 };
 
 const dashClose = () => {
