@@ -79,7 +79,7 @@ function TeamSelect({ onClick }) {
                     weaponIcon: rangedIcon,
                     A: 4,
                     BS: "2+",
-                    D: "3/4",
+                    D: "4/5",
                     SR: "Ceaseless",
                     Crit: "-"
                 },
@@ -393,7 +393,7 @@ function TeamSelect({ onClick }) {
                     A: 4,
                     BS: "3+",
                     D: "3/4",
-                    SR: "Ceaseless",
+                    SR: "Ceaseless, lethal 5+ (with scope)",
                     Crit: "-"
                 },
                 {
