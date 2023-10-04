@@ -1,14 +1,14 @@
 import "../Style/teamSelect.css"
-import INTER1 from '../images/INTER1.jpg';
-import INTER2 from '../images/INTER2.jpg';
+import SKULJ from '../images/SKULJ.jpg';
+import FIRES from '../images/FIRES.jpg';
+import THUN from '../images/THUN.jpg';
+import SIKR from '../images/SIKR.jpg';
+import SKUL from '../images/SKUL.jpg';
+import FELS from '../images/FELS.jpg';
+import KRUG from '../images/KRUG.jpg';
 import INTER3 from '../images/INTER3.jpg';
-import AINTER1 from '../images/AINTER1.jpg';
 import AINTER2 from '../images/AINTER2.jpg';
 import AINTER3 from '../images/AINTER3.jpg';
-import GREN from '../images/GREN.jpg';
-import GUNNER from '../images/GUNNER.jpg';
-import SGT from '../images/SGT.jpg';
-import SCOPE from '../images/SCOPE.jpg';
 import meleeIcon from '../images/weptypeM.png';
 import rangedIcon from '../images/weptypeR.png';
 import React, { useState, useEffect } from 'react';
@@ -30,6 +30,14 @@ const srElementFG = renderToString(
 
 const srElementKG = renderToString(
     <div className="headerSR oswald">RNG<div className="SRpentagon"></div>, AP1, Indirect, Limited</div>
+);
+
+const srElementPLAS = renderToString(
+    <div className="headerSR oswald">RNG<div className="SRpentagon"></div>, AP1</div>
+);
+
+const srElementPLASHOT = renderToString(
+    <div className="headerSR oswald">RNG<div className="SRpentagon"></div>, AP2, Hot</div>
 );
 
 function TeamSelect({ onClick }) {
@@ -64,7 +72,7 @@ function TeamSelect({ onClick }) {
         $('.operative1').addClass('noClick');
         const newOperative = {
             id: "operative1",
-            image: SGT,
+            image: SKULJ,
             operativeName: "Skulljaeger",
             type: "Marksman, Scout",
             M: 3,
@@ -75,28 +83,46 @@ function TeamSelect({ onClick }) {
             W: 15,
             Weapons: [
                 {
-                    weaponName: "Auto Bolt Rifle (RBB)",
+                    weaponName: "Plasma Pistol",
                     weaponIcon: rangedIcon,
+                    A: "",
+                    BS: "",
+                    D: "",
+                    SR: "",
+                    Crit: ""
+                },
+                {
+                    weaponName: "          -Standard",
+                    weaponIcon: "",
                     A: 4,
-                    BS: "2+",
-                    D: "4/5",
-                    SR: "Ceaseless",
+                    BS: "3+",
+                    D: "5/6",
+                    SR: srElementPLAS,
                     Crit: "-"
                 },
                 {
-                    weaponName: "Power Weapon",
-                    weaponIcon: meleeIcon,
+                    weaponName: "          -Supercharge",
+                    weaponIcon: "",
                     A: 4,
                     BS: "3+",
-                    D: "4/6",
-                    SR: "Lethal 5+",
+                    D: "5/6",
+                    SR: srElementPLASHOT,
+                    Crit: "-"
+                },
+                {
+                    weaponName: "Chainsword",
+                    weaponIcon: meleeIcon,
+                    A: 5,
+                    BS: "2+",
+                    D: "4/5",
+                    SR: "-",
                     Crit: "-"
                 }
             ],
             Abilities: [
                 {
-                    name: "Bolter Discipline",
-                    detail: "This operative can perform two Shoot actions during its activation if a bolt weapon is selected for at least one of those shooting attacks."
+                    name: "Shock Assault ",
+                    detail: "This operative can perform two Fight actions during its activation."
                 }
             ],
             UniqueActions: [],
@@ -118,7 +144,7 @@ function TeamSelect({ onClick }) {
         $('.operative2').addClass('noClick');
         const newOperative = {
             id: "operative2",
-            image: GUNNER,
+            image: FIRES,
             operativeName: "Firestriker",
             type: "Staunch, Scout",
             M: 3,
@@ -140,9 +166,9 @@ function TeamSelect({ onClick }) {
                 {
                     weaponName: "Auxiliary Grenade Launcher",
                     weaponIcon: rangedIcon,
-                    A: 4,
-                    BS: "3+",
-                    D: "4/3",
+                    A: "",
+                    BS: "",
+                    D: "",
                     SR: "",
                     Crit: ""
                 },
@@ -162,6 +188,15 @@ function TeamSelect({ onClick }) {
                     SR: "AP1",
                     Crit: "-"
                 },
+                {
+                    weaponName: "Fists",
+                    weaponIcon: meleeIcon,
+                    A: 4,
+                    BS: "3+",
+                    D: "3/4",
+                    SR: "-",
+                    Crit: "-"
+                }
             ],
             Abilities: [
                 {
@@ -188,62 +223,7 @@ function TeamSelect({ onClick }) {
         $('.operative3').addClass('noClick');
         const newOperative = {
             id: "operative3",
-            image: SCOPE,
-            operativeName: "Skygge",
-            type: "Type 1",
-            M: 3,
-            APL: 3,
-            GA: 1,
-            DF: 3,
-            SV: "3+",
-            W: 14,
-            Weapons: [
-                {
-                    weaponName: "Bolt Rifle (VSC)",
-                    weaponIcon: rangedIcon,
-                    A: 4,
-                    BS: "3+",
-                    D: "3/4",
-                    SR: "Lethal 5+",
-                    Crit: "P1"
-                },
-                {
-                    weaponName: "Combat Blade",
-                    weaponIcon: meleeIcon,
-                    A: 4,
-                    BS: "3+",
-                    D: "3/5",
-                    SR: "-",
-                    Crit: "-"
-                }
-            ],
-            Abilities: [
-                {
-                    name: "Bolter Discipline ",
-                    detail: "This operative can perform two Shoot actions during its activation if a bolt weapon is selected for at least one of those shooting attacks."
-                },
-            ],
-            UniqueActions: [
-            ],
-            KeyWords: ["Keyword 1", "Keyword 2"],
-            Notes: [""]
-        };
-        setOperativesArray(prevArray => [...prevArray, newOperative]);
-        setTeamCounter(teamCounter + 1);
-    };
-
-    const operative4Click = () => {
-
-        if (teamCounter >= 6) {
-            setIsTeamFullModalOpen(true);
-            return;
-        }
-
-        $('.operative4').addClass('operativeSelected');
-        $('.operative4').addClass('noClick');
-        const newOperative = {
-            id: "operative4",
-            image: GREN,
+            image: THUN,
             operativeName: "Thunderborn",
             type: "Type 1",
             M: 3,
@@ -310,6 +290,61 @@ function TeamSelect({ onClick }) {
         setTeamCounter(teamCounter + 1);
     };
 
+    const operative4Click = () => {
+
+        if (teamCounter >= 6) {
+            setIsTeamFullModalOpen(true);
+            return;
+        }
+
+        $('.operative4').addClass('operativeSelected');
+        $('.operative4').addClass('noClick');
+        const newOperative = {
+            id: "operative4",
+            image: SIKR,
+            operativeName: "Sikrend",
+            type: "Type 1",
+            M: 3,
+            APL: 3,
+            GA: 1,
+            DF: 3,
+            SV: "3+",
+            W: 14,
+            Weapons: [
+                {
+                    weaponName: "Bolt Rifle",
+                    weaponIcon: rangedIcon,
+                    A: 4,
+                    BS: "3+",
+                    D: "3/4",
+                    SR: "-",
+                    Crit: "P1"
+                },
+                {
+                    weaponName: "Fists",
+                    weaponIcon: meleeIcon,
+                    A: 4,
+                    BS: "3+",
+                    D: "3/4",
+                    SR: "-",
+                    Crit: "-"
+                }
+            ],
+            Abilities: [
+                {
+                    name: "Bolter Discipline ",
+                    detail: "This operative can perform two Shoot actions during its activation if a bolt weapon is selected for at least one of those shooting attacks."
+                },
+            ],
+            UniqueActions: [
+            ],
+            KeyWords: ["Keyword 1", "Keyword 2"],
+            Notes: [""]
+        };
+        setOperativesArray(prevArray => [...prevArray, newOperative]);
+        setTeamCounter(teamCounter + 1);
+    };
+
     const operative5Click = () => {
 
         if (teamCounter >= 6) {
@@ -321,8 +356,118 @@ function TeamSelect({ onClick }) {
         $('.operative5').addClass('noClick');
         const newOperative = {
             id: "operative5",
-            image: AINTER1,
+            image: SKUL,
             operativeName: "Skulder",
+            type: "Type 1",
+            M: 3,
+            APL: 3,
+            GA: 1,
+            DF: 3,
+            SV: "3+",
+            W: 14,
+            Weapons: [
+                {
+                    weaponName: "Bolt Rifle",
+                    weaponIcon: rangedIcon,
+                    A: 4,
+                    BS: "3+",
+                    D: "3/4",
+                    SR: "-",
+                    Crit: "P1"
+                },
+                {
+                    weaponName: "Fists",
+                    weaponIcon: meleeIcon,
+                    A: 4,
+                    BS: "3+",
+                    D: "3/4",
+                    SR: "-",
+                    Crit: "-"
+                }
+            ],
+            Abilities: [
+                {
+                    name: "Bolter Discipline ",
+                    detail: "This operative can perform two Shoot actions during its activation if a bolt weapon is selected for at least one of those shooting attacks."
+                },
+            ],
+            UniqueActions: [
+            ],
+            KeyWords: ["Keyword 1", "Keyword 2"],
+            Notes: [""]
+        };
+        setOperativesArray(prevArray => [...prevArray, newOperative]);
+        setTeamCounter(teamCounter + 1);
+    };
+
+    const operative6Click = () => {
+
+        if (teamCounter >= 6) {
+            setIsTeamFullModalOpen(true);
+            return;
+        }
+
+        $('.operative6').addClass('operativeSelected');
+        $('.operative6').addClass('noClick');
+        const newOperative = {
+            id: "operative6",
+            image: FELS,
+            operativeName: "Fellseeker",
+            type: "Type 1",
+            M: 3,
+            APL: 3,
+            GA: 1,
+            DF: 3,
+            SV: "3+",
+            W: 14,
+            Weapons: [
+                {
+                    weaponName: "Bolt Rifle",
+                    weaponIcon: rangedIcon,
+                    A: 4,
+                    BS: "3+",
+                    D: "3/4",
+                    SR: "-",
+                    Crit: "P1"
+                },
+                {
+                    weaponName: "Fists",
+                    weaponIcon: meleeIcon,
+                    A: 4,
+                    BS: "3+",
+                    D: "3/4",
+                    SR: "-",
+                    Crit: "-"
+                }
+            ],
+            Abilities: [
+                {
+                    name: "Bolter Discipline ",
+                    detail: "This operative can perform two Shoot actions during its activation if a bolt weapon is selected for at least one of those shooting attacks."
+                },
+            ],
+            UniqueActions: [
+            ],
+            KeyWords: ["Keyword 1", "Keyword 2"],
+            Notes: [""]
+        };
+        setOperativesArray(prevArray => [...prevArray, newOperative]);
+        setTeamCounter(teamCounter + 1);
+    };
+
+    const operative7Click = () => {
+
+        if (teamCounter >= 6) {
+            setIsTeamFullModalOpen(true);
+            return;
+        }
+
+        $('.operative7').addClass('operativeSelected');
+        $('.operative7').addClass('noClick');
+        const newOperative = {
+            id: "operative7",
+            image: KRUG,
+            operativeName: "Krugen",
             type: "Type 1",
             M: 3,
             APL: 3,
@@ -354,118 +499,6 @@ function TeamSelect({ onClick }) {
                 {
                     name: "Shock Assault ",
                     detail: "This operative can perform two Fight actions during its activation."
-                }
-            ],
-            UniqueActions: [
-
-            ],
-            KeyWords: ["Keyword 1", "Keyword 2"],
-            Notes: [""]
-        };
-        setOperativesArray(prevArray => [...prevArray, newOperative]);
-        setTeamCounter(teamCounter + 1);
-    };
-
-    const operative6Click = () => {
-
-        if (teamCounter >= 6) {
-            setIsTeamFullModalOpen(true);
-            return;
-        }
-
-        $('.operative6').addClass('operativeSelected');
-        $('.operative6').addClass('noClick');
-        const newOperative = {
-            id: "operative6",
-            image: INTER2,
-            operativeName: "Krugan",
-            type: "Type 1",
-            M: 3,
-            APL: 3,
-            GA: 1,
-            DF: 3,
-            SV: "3+",
-            W: 14,
-            Weapons: [
-                {
-                    weaponName: "Auto Bolt Rifle",
-                    weaponIcon: rangedIcon,
-                    A: 4,
-                    BS: "3+",
-                    D: "3/4",
-                    SR: "Ceaseless, lethal 5+ (with scope)",
-                    Crit: "-"
-                },
-                {
-                    weaponName: "Fists",
-                    weaponIcon: meleeIcon,
-                    A: 4,
-                    BS: "3+",
-                    D: "3/4",
-                    SR: "-",
-                    Crit: "-"
-                },
-            ],
-            Abilities: [
-                {
-                    name: "Bolter Discipline ",
-                    detail: "This operative can perform two Shoot actions during its activation if a bolt weapon is selected for at least one of those shooting attacks."
-                }
-            ],
-            UniqueActions: [
-
-            ],
-            KeyWords: ["Keyword 1", "Keyword 2"],
-            Notes: [""]
-        };
-        setOperativesArray(prevArray => [...prevArray, newOperative]);
-        setTeamCounter(teamCounter + 1);
-    };
-
-    const operative7Click = () => {
-
-        if (teamCounter >= 6) {
-            setIsTeamFullModalOpen(true);
-            return;
-        }
-
-        $('.operative7').addClass('operativeSelected');
-        $('.operative7').addClass('noClick');
-        const newOperative = {
-            id: "operative7",
-            image: INTER1,
-            operativeName: "Fellseeker",
-            type: "Type 1",
-            M: 3,
-            APL: 3,
-            GA: 1,
-            DF: 3,
-            SV: "3+",
-            W: 14,
-            Weapons: [
-                {
-                    weaponName: "Auto Bolt Rifle",
-                    weaponIcon: rangedIcon,
-                    A: 4,
-                    BS: "3+",
-                    D: "3/4",
-                    SR: "Ceaseless",
-                    Crit: "-"
-                },
-                {
-                    weaponName: "Fists",
-                    weaponIcon: meleeIcon,
-                    A: 4,
-                    BS: "3+",
-                    D: "3/4",
-                    SR: "-",
-                    Crit: "-"
-                },
-            ],
-            Abilities: [
-                {
-                    name: "Bolter Discipline ",
-                    detail: "This operative can perform two Shoot actions during its activation if a bolt weapon is selected for at least one of those shooting attacks."
                 }
             ],
             UniqueActions: [
@@ -663,60 +696,53 @@ function TeamSelect({ onClick }) {
             <div className="TEAMrow">
                 <div className="TEAMchoice operative1" onClick={operative1Click}>
                     <div className="TEAMoperativeImageHolder">
-                        <img className="TEAMoperativeImage" src={SGT} alt="" />
+                        <img className="TEAMoperativeImage" src={SKULJ} alt="" />
                     </div>
                     <h3>Skulljaeger</h3>
-                    <p>RECLUSIAM-BLESSED BOLTS <b>(3EP)</b></p>
                 </div>
 
                 <div className="TEAMchoice operative2" onClick={operative2Click}>
                     <div className="TEAMoperativeImageHolder">
-                        <img className="TEAMoperativeImage" src={GUNNER} alt="" />
+                        <img className="TEAMoperativeImage" src={FIRES} alt="" />
                     </div>
                     <h3>Firestriker</h3>
-                    <p>AUSPEX <b>(2EP)</b></p>
-                    <p>COMBAT BLADE <b>(1EP)</b></p>
                 </div>
 
                 <div className="TEAMchoice operative3" onClick={operative3Click}>
                     <div className="TEAMoperativeImageHolder">
-                        <img className="TEAMoperativeImage" src={SCOPE} alt="" />
+                        <img className="TEAMoperativeImage" src={THUN} alt="" />
                     </div>
-                    <h3>Skygge</h3>
-                    <p>VENGEANCE-CLASS SCOPE <b>(3EP)</b></p>
-                    <p>COMBAT BLADE <b>(1EP)</b></p>
+                    <h3>Thunderborn</h3>
                 </div>
 
                 <div className="TEAMchoice operative4" onClick={operative4Click}>
                     <div className="TEAMoperativeImageHolder">
-                        <img className="TEAMoperativeImage" src={GREN} alt="" />
+                        <img className="TEAMoperativeImage" src={SIKR} alt="" />
                     </div>
-                    <h3>Thunderborn</h3>
-                    <p>FRAG/KRAK GRENADES <b>(FREE)</b></p>
+                    <h3>Sikrend</h3>
                 </div>
 
                 <div className="TEAMchoice operative5" onClick={operative5Click}>
                     <div className="TEAMoperativeImageHolder">
-                        <img className="TEAMoperativeImage" src={AINTER1} alt="" />
+                        <img className="TEAMoperativeImage" src={SKUL} alt="" />
                     </div>
                     <h3>Skulder</h3>
-                    <p>TILTING SHIELD <b>(3EP)</b></p>
                 </div>
 
             </div>
             <div className="TEAMrow">
                 <div className="TEAMchoice operative6" onClick={operative6Click}>
                     <div className="TEAMoperativeImageHolder">
-                        <img className="TEAMoperativeImage" src={INTER2} alt="" />
+                        <img className="TEAMoperativeImage" src={FELS} alt="" />
                     </div>
-                    <h3>Krugan</h3>
+                    <h3>Fellseeker</h3>
                 </div>
 
                 <div className="TEAMchoice operative7" onClick={operative7Click}>
                     <div className="TEAMoperativeImageHolder">
-                        <img className="TEAMoperativeImage" src={INTER1} alt="" />
+                        <img className="TEAMoperativeImage" src={KRUG} alt="" />
                     </div>
-                    <h3>Fellseeker</h3>
+                    <h3>Krugen</h3>
                 </div>
 
                 <div className="TEAMchoice operative8" onClick={operative8Click}>
