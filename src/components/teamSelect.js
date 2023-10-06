@@ -256,7 +256,7 @@ function TeamSelect({ onClick }) {
                     weaponIcon: rangedIcon,
                     A: 4,
                     BS: "3+",
-                    D: "3/4",
+                    D: "2/3",
                     SR: srElementFG,
                     Crit: ""
                 },
